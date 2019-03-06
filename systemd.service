@@ -1,0 +1,13 @@
+# Пример файла /etc/systemd/system/myproject-prod.service
+
+# [Unit]
+# Description=myproject (myproject.com) production daemon
+
+# [Service]
+# Environment="MYPROJECT_CONFIG_TYPE=production"
+# WorkingDirectory=/home/user/myproject.com/
+# ExecStart=/home/myproject/.local/bin/gunicorn -b :5000 uwsgi:app
+# Restart=on-failure
+
+# [Install]
+# WantedBy=multi-user.target
